@@ -17,7 +17,7 @@ var Vimeo = {
         this.fetch();
     },
     getId: function (url) {
-        var vid = url.match(/https?:\/\/(?:www\.)?vimeo.com\/(?:channels\/|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/);
+        var vid = url.match(/\/\/(?:www|player\.)?vimeo.com\/(?:video\/|channels\/|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/);
         if (vid) {
             return vid[3];
         }
